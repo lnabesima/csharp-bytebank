@@ -6,4 +6,9 @@ public class ContaCorrente
     public string conta;
     public string titular;
     public double saldo;
+
+    public void Depositar(double valor)
+    {
+        this.saldo += valor;
+    }
 }

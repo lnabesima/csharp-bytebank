@@ -8,3 +8,5 @@ var contaDoAndre = new ContaCorrente
 };
 
 Console.WriteLine($"O saldo da conta corrente do André é de R$ {contaDoAndre.saldo}.");
+contaDoAndre.Depositar(100);
+Console.WriteLine($"O saldo da conta corrente do André é de R$ {contaDoAndre.saldo}.");
