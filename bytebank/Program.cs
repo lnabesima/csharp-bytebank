@@ -25,3 +25,5 @@ var contaDaMaria = new ContaCorrente
 contaDoAndre.Transferir(100, contaDaMaria);
 Console.WriteLine($"O saldo da conta corrente do André é de R$ {contaDoAndre.saldo}.");
 Console.WriteLine($"O saldo da conta corrente da Ana é de R$ {contaDaMaria.saldo}.");
+
+contaDaMaria.MostraInformacoes();

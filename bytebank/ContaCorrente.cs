@@ -40,4 +40,13 @@ public class ContaCorrente
             return false;
         }
     }
+
+    public void MostraInformacoes()
+    {
+        Console.WriteLine("Os dados da conta são os seguintes:");
+        Console.WriteLine($"Titular: {this.titular}");
+        Console.WriteLine($"Número da agência: {agencia}");
+        Console.WriteLine($"Número da conta: {conta}");
+        Console.WriteLine($"Saldo atual: {saldo}");
+    }
 }
