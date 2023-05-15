@@ -3,7 +3,12 @@ var contaDoAndre = new ContaCorrente
 {
     agencia = 15,
     conta = "1010-X",
-    titular = "André Silva",
+    titular = new Cliente
+    {
+        cpf = "01234567891",
+        nome= "André Silva",
+        profissao = "Padeiro"
+    },
     saldo = 100,
 };
 
@@ -17,7 +22,12 @@ var contaDaMaria = new ContaCorrente
 {
     agencia = 17,
     conta = "1010-5",
-    titular = "Maria Souza",
+    titular = new Cliente
+    {
+        nome= "Maria Silva",
+        cpf= "98765432100",
+        profissao = "Professora"
+    },
     saldo = 350,
 
 };
