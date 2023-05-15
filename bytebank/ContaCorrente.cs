@@ -11,4 +11,19 @@ public class ContaCorrente
     {
         this.saldo += valor;
     }
+
+    public bool Sacar(double valor)
+    {
+        if (this.saldo > valor)
+        {
+            this.saldo -= valor;
+            return true;
+
+        }
+        else
+        {
+            Console.WriteLine("Esta conta não possui saldo suficiente para realizar esta operação.");
+            return false;
+        }
+    }
 }
