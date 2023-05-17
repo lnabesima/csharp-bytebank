@@ -1,4 +1,5 @@
 ﻿using bytebank;
+
 var contaDoAndre = new ContaCorrente
 {
     agencia = 15,
@@ -6,10 +7,10 @@ var contaDoAndre = new ContaCorrente
     titular = new Cliente
     {
         cpf = "01234567891",
-        nome= "André Silva",
+        nome = "André Silva",
         profissao = "Padeiro"
     },
-    saldo = 100,
+    saldo = 100
 };
 
 Console.WriteLine($"O saldo da conta corrente do André é de R$ {contaDoAndre.saldo}.");
@@ -24,12 +25,11 @@ var contaDaMaria = new ContaCorrente
     conta = "1010-5",
     titular = new Cliente
     {
-        nome= "Maria Silva",
-        cpf= "98765432100",
+        nome = "Maria Silva",
+        cpf = "98765432100",
         profissao = "Professora"
     },
-    saldo = 350,
-
+    saldo = 350
 };
 
 contaDoAndre.Transferir(100, contaDaMaria);
