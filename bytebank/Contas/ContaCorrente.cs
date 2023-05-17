@@ -4,7 +4,7 @@ public class ContaCorrente
 {
     public int agencia;
     public string conta;
-    public string titular;
+    public Cliente titular;
     public double saldo;
 
     public void Depositar(double valor)
@@ -44,7 +44,7 @@ public class ContaCorrente
     public void MostraInformacoes()
     {
         Console.WriteLine("Os dados da conta são os seguintes:");
-        Console.WriteLine($"Titular: {this.titular}");
+        Console.WriteLine($"Titular: {this.titular.nome}");
         Console.WriteLine($"Número da agência: {agencia}");
         Console.WriteLine($"Número da conta: {conta}");
         Console.WriteLine($"Saldo atual: {saldo}");
