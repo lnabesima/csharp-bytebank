@@ -2,7 +2,14 @@
 
 public class Cliente
 {
-    public string nome;
-    public string cpf;
-    public string profissao;
+    public Cliente()
+    {
+        TotalDeClientes++;
+    }
+    
+    public static int TotalDeClientes { get; private set; }
+    
+    public string Nome { get; set; }
+    public string Cpf { get; set; }
+    public string Profissao { get; set; }
 }

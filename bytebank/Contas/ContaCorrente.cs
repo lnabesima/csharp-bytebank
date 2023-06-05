@@ -2,10 +2,24 @@
 
 public class ContaCorrente
 {
-    public int agencia;
-    public string conta;
-    public Cliente titular;
-    public double saldo;
+    public ContaCorrente(Cliente titular, string nome_agencia, int numero_agencia, string numero_conta)
+    {
+        this.Nome_Agencia = nome_agencia;
+        this.Agencia = numero_agencia;
+        this.Conta = numero_conta;
+        this.Titular = titular;
+        TotalDeContasCriadas++;
+    }
+    
+    public static int TotalDeContasCriadas { get; private set; }
+    public string Nome_Agencia { get; set; }
+    public int Agencia { get;  }
+    public string Conta { get;}  
+    
+
+    public Cliente Titular { get; set; }
+
+    private double saldo;
 
     public void Depositar(double valor)
     {
@@ -41,12 +55,29 @@ public class ContaCorrente
         }
     }
 
+    public void SetSaldo(double valor)
+    {
+        if (valor < 0)
+        {
+            return;
+        }
+        else
+        {
+            this.saldo = valor;
+        }
+    }
+
+    public double GetSaldo()
+    {
+        return this.saldo;
+    }
+
     public void MostraInformacoes()
     {
         Console.WriteLine("Os dados da conta são os seguintes:");
-        Console.WriteLine($"Titular: {this.titular.nome}");
-        Console.WriteLine($"Número da agência: {agencia}");
-        Console.WriteLine($"Número da conta: {conta}");
+        Console.WriteLine($"Titular: {this.Titular}");
+        Console.WriteLine($"Número da agência: {Agencia}");
+        Console.WriteLine($"Número da conta: {Conta}");
         Console.WriteLine($"Saldo atual: {saldo}");
     }
 }
